@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DueDates.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled">
+    <ContentPage.Content>
+        <StackLayout Background="#16161a">
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image
+                
+                Aspect="AspectFill"
+                HeightRequest="200"
+                Source="DueDates.png" />
+                
+            
+
+            </Grid>
+
+            <Entry x:Name="UserName" Placeholder="Username" BackgroundColor="#94a1b2" WidthRequest="300" HorizontalOptions="Center" Margin="0,0,0,10"/>
+            <Entry x:Name="Password" Placeholder="Password" BackgroundColor="#94a1b2" WidthRequest="300" HorizontalOptions="Center" IsPassword="True"/>
+            
+            <Grid Margin="40,20,40,0">
+                
+                <Button VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Text="Login" 
+                        HeightRequest="70"
+                        WidthRequest="300"
+                        Command="{Binding LoginCommand}"/>
+            </Grid>
+            
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
